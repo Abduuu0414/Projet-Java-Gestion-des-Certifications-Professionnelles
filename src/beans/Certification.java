@@ -13,19 +13,19 @@ package beans;
 public class Certification {
     private int id;
     private String nom;
-    private String prenom;
+    private String organisme;
     private double cout;
 
-    public Certification(String nom, String prenom, double cout) {
+    public Certification(String nom, String organisme, double cout) {
         this.nom = nom;
-        this.prenom = prenom;
+        this.organisme = organisme;
         this.cout = cout;
     }
     
-    public Certification(int id, String nom, String prenom, double cout) {
+    public Certification(int id, String nom, String organisme, double cout) {
         this.id = id;
         this.nom = nom;
-        this.prenom = prenom;
+        this.organisme = organisme;
         this.cout = cout;
     }
 
@@ -45,12 +45,12 @@ public class Certification {
         this.nom = nom;
     }
 
-    public String getPrenom() {
-        return prenom;
+    public String getOrganisme() {
+        return organisme;
     }
 
-    public void setPrenom(String prenom) {
-        this.prenom = prenom;
+    public void setOrganisme(String organisme) {
+        this.organisme = organisme;
     }
 
     public double getCout() {

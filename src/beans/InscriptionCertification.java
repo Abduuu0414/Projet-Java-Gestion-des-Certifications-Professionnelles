@@ -16,6 +16,36 @@ public class InscriptionCertification {
     private Certification certification;
     private Etudiant etudiant;
     private Date dateInscription;
+
+    public InscriptionCertification(Certification certification, Etudiant etudiant, Date dateInscription) {
+        this.certification = certification;
+        this.etudiant = etudiant;
+        this.dateInscription = dateInscription;
+    }
+
+    public Certification getCertification() {
+        return certification;
+    }
+
+    public void setCertification(Certification certification) {
+        this.certification = certification;
+    }
+
+    public Etudiant getEtudiant() {
+        return etudiant;
+    }
+
+    public void setEtudiant(Etudiant etudiant) {
+        this.etudiant = etudiant;
+    }
+
+    public Date getDateInscription() {
+        return dateInscription;
+    }
+
+    public void setDateInscription(Date dateInscription) {
+        this.dateInscription = dateInscription;
+    }
     
     
 }
