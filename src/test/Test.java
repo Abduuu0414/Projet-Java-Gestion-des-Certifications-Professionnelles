@@ -20,7 +20,7 @@ import java.util.List;
  */
 public class Test {
     public static void main(String[] args) {
-        
+
         CertificationService cs = new CertificationService();
         EtudiantService es = new EtudiantService();
         InscriptionCertificationService ics = new InscriptionCertificationService();
