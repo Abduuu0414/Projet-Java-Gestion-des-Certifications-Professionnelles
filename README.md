@@ -16,6 +16,7 @@ La base de données MySQL est composée des tables suivantes :
 - **Certification** : Contient les informations sur les certifications.
 - **Étudiant** : Contient les informations sur les étudiants.
 - **InscriptionCertification** : Contient les informations sur les inscriptions des étudiants aux certifications.
+- **User** : Contient les informations de connexion des utilisateurs (login et mot de passe).
 
 ### Schéma de la Base de Données
 
@@ -41,4 +42,9 @@ CREATE TABLE InscriptionCertification (
     date_inscription DATE NOT NULL,
     FOREIGN KEY (certification_id) REFERENCES Certification(id),
     FOREIGN KEY (etudiant_id) REFERENCES Étudiant(id)
+);
+
+CREATE TABLE User (
+    login VARCHAR(50) PRIMARY KEY,
+    password CHAR(32) NOT NULL
 );
