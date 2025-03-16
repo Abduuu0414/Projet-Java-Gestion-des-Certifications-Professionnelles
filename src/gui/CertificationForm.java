@@ -30,6 +30,8 @@ public class CertificationForm extends javax.swing.JInternalFrame {
         load();
     }
     
+    
+    
     public void load() {
         model.setRowCount(0);
         for (Certification c : cs.findAll()) {
@@ -60,7 +62,14 @@ public class CertificationForm extends javax.swing.JInternalFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         listeCertifications = new javax.swing.JTable();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+        setResizable(true);
+        setTitle("Gestion et Affichage des Certifications");
+        setAlignmentX(100.0F);
+        setAlignmentY(100.0F);
+        setPreferredSize(new java.awt.Dimension(800, 600));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Gestion des certification"));

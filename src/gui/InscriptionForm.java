@@ -88,6 +88,15 @@ public class InscriptionForm extends javax.swing.JInternalFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         listeInscriptions = new javax.swing.JTable();
 
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+        setResizable(true);
+        setTitle("Gestion et Affichage des Inscriptions");
+        setAlignmentX(100.0F);
+        setAlignmentY(100.0F);
+        setPreferredSize(new java.awt.Dimension(800, 600));
+
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Gestion des inscriptions"));
 

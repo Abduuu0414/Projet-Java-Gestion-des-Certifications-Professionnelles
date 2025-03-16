@@ -7,6 +7,7 @@ package gui;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
+import javax.swing.JInternalFrame;
 
 /**
  *
@@ -138,23 +139,41 @@ public class MDIApplication extends javax.swing.JFrame {
     }//GEN-LAST:event_exitMenuItemActionPerformed
 
     private void etudiantMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_etudiantMenuItemActionPerformed
+        closeAllInternalFrames();
         EtudiantForm ef = new EtudiantForm();
         desktopPane.add(ef);
         ef.setVisible(true);
+        centerInternalFrame(ef);
     }//GEN-LAST:event_etudiantMenuItemActionPerformed
 
     private void certificationMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_certificationMenuItemActionPerformed
+        closeAllInternalFrames();
         CertificationForm cf = new CertificationForm();
         desktopPane.add(cf);
         cf.setVisible(true);
+        centerInternalFrame(cf);
     }//GEN-LAST:event_certificationMenuItemActionPerformed
 
     private void inscriptionMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inscriptionMenuItemActionPerformed
+        closeAllInternalFrames();
         InscriptionForm insf = new InscriptionForm();
         desktopPane.add(insf);
         insf.setVisible(true);
+        centerInternalFrame(insf);
     }//GEN-LAST:event_inscriptionMenuItemActionPerformed
 
+    private void closeAllInternalFrames() {
+        for (JInternalFrame frame : desktopPane.getAllFrames()) {
+            frame.dispose();
+        }
+    }
+
+    private void centerInternalFrame(JInternalFrame internalFrame) {
+        int x = (desktopPane.getWidth() - internalFrame.getWidth()) / 2;
+        int y = (desktopPane.getHeight() - internalFrame.getHeight()) / 2;
+        internalFrame.setLocation(x, y);
+    }
+    
     private void certificationParNomMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_certificationParNomMenuItemActionPerformed
         EtudiantParCertification cpnf = new EtudiantParCertification();
         desktopPane.add(cpnf);
