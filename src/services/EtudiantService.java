@@ -5,12 +5,14 @@
  */
 package services;
 
+import beans.Certification;
 import beans.Etudiant;
 import connexion.Connexion;
 import dao.IDao;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -104,4 +106,26 @@ public class EtudiantService implements IDao<Etudiant> {
         }
         return etudiants;
     }
+
+    public List<Etudiant> findByCertification(Certification certification) {
+    List<Etudiant> etudiants = new ArrayList<>();
+    String req = "SELECT e.* FROM Etudiant e " +
+                 "JOIN InscriptionCertification ic ON e.id = ic.etudiant_id " +
+                 "WHERE ic.certification_id = " + certification.getId();
+    try {
+        Statement st = connexion.getCn().createStatement();
+        ResultSet rs = st.executeQuery(req);
+        while (rs.next()) {
+            etudiants.add(new Etudiant(
+                rs.getInt("id"),
+                rs.getString("nom"),
+                rs.getString("prenom"),
+                rs.getString("email")
+            ));
+        }
+    } catch (SQLException ex) {
+        System.out.println(ex.getMessage());
+    }
+    return etudiants;
+}
 }

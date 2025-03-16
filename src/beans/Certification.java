@@ -60,6 +60,11 @@ public class Certification {
     public void setCout(double cout) {
         this.cout = cout;
     }
+
+    @Override
+    public String toString() {
+        return nom;
+    }
     
     
     

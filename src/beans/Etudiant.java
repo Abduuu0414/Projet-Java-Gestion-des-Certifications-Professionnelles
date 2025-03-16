@@ -10,7 +10,7 @@ package beans;
  * @author admin
  */
 public class Etudiant {
-    
+
     private int id;
     private String nom;
     private String prenom;
@@ -21,7 +21,7 @@ public class Etudiant {
         this.prenom = prenom;
         this.email = email;
     }
-    
+
     public Etudiant(int id, String nom, String prenom, String email) {
         this.id = id;
         this.nom = nom;
@@ -60,6 +60,10 @@ public class Etudiant {
     public void setEmail(String email) {
         this.email = email;
     }
-    
-    
+
+    @Override
+    public String toString() {
+        return this.nom + " " + this.prenom; // Affiche le nom et le prénom
+    }
+
 }
