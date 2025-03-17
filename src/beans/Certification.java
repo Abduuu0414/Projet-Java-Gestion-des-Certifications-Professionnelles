@@ -65,7 +65,5 @@ public class Certification {
     public String toString() {
         return nom;
     }
-    
-    
-    
+
 }

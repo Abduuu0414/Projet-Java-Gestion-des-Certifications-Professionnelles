@@ -43,6 +43,7 @@ public class Main extends javax.swing.JFrame {
         txtPassword = new javax.swing.JPasswordField();
         bnConnexion = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -52,16 +53,19 @@ public class Main extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(48, 48, 119));
-        jLabel1.setText("Login :");
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/username-icon.png"))); // NOI18N
+        jLabel1.setText(" Login :");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 260, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(48, 48, 119));
-        jLabel2.setText("Mot de passe :");
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/password-icon.png"))); // NOI18N
+        jLabel2.setText(" Mot de passe :");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 390, -1, -1));
 
         txtLogin.setFont(new java.awt.Font("Source Sans Pro Light", 1, 18)); // NOI18N
         txtLogin.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        txtLogin.setDisabledTextColor(new java.awt.Color(37, 37, 126));
         txtLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtLoginActionPerformed(evt);
@@ -78,17 +82,27 @@ public class Main extends javax.swing.JFrame {
         bnConnexion.setForeground(new java.awt.Color(255, 255, 255));
         bnConnexion.setText("Connexion");
         bnConnexion.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        bnConnexion.setBorderPainted(false);
         bnConnexion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bnConnexionActionPerformed(evt);
             }
         });
-        jPanel1.add(bnConnexion, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 540, 350, 40));
+        jPanel1.add(bnConnexion, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 560, 370, 40));
 
         jLabel5.setFont(new java.awt.Font("Algerian", 0, 24)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(48, 48, 119));
         jLabel5.setText("Certification Professionelles");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, -1, -1));
+
+        jLabel4.setForeground(new java.awt.Color(48, 48, 119));
+        jLabel4.setText("mot de passe oublie?");
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel4MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 490, 140, 20));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/login-page.png"))); // NOI18N
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 780));
@@ -125,6 +139,36 @@ public class Main extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Login ou mot de passe incorrect");
         }
     }//GEN-LAST:event_bnConnexionActionPerformed
+
+    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
+        // Demander à l'utilisateur de saisir son login
+        String login = JOptionPane.showInputDialog(this, "Veuillez saisir votre login :");
+
+        if (login != null && !login.trim().isEmpty()) {
+            UserService userService = new UserService();
+
+            // Verifier si le login existe
+            if (userService.userExists(login)) {
+                // Demander a l'utilisateur de saisir un nouveau mot de passe
+                String newPassword = JOptionPane.showInputDialog(this, "Veuillez saisir votre nouveau mot de passe :");
+
+                if (newPassword != null && !newPassword.trim().isEmpty()) {
+                    // Mettre a jour le mot de passe dans la base de donnees
+                    if (userService.updatePassword(login, newPassword)) {
+                        JOptionPane.showMessageDialog(this, "Mot de passe mis à jour avec succès !");
+                    } else {
+                        JOptionPane.showMessageDialog(this, "Erreur lors de la mise à jour du mot de passe.");
+                    }
+                } else {
+                    JOptionPane.showMessageDialog(this, "Le mot de passe ne peut pas être vide.");
+                }
+            } else {
+                JOptionPane.showMessageDialog(this, "Login introuvable.");
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "Le login ne peut pas être vide.");
+        }
+    }//GEN-LAST:event_jLabel4MouseClicked
 
     /**
      * @param args the command line arguments
@@ -166,6 +210,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField txtLogin;

@@ -54,6 +54,7 @@ public class MDIApplication extends javax.swing.JFrame {
         exitMenuItem = new javax.swing.JMenuItem();
         editMenu = new javax.swing.JMenu();
         certificationParNomMenuItem = new javax.swing.JMenuItem();
+        inscriptionParCertificationMenuItem = new javax.swing.JMenuItem();
         helpMenu = new javax.swing.JMenu();
         contentMenuItem = new javax.swing.JMenuItem();
         aboutMenuItem = new javax.swing.JMenuItem();
@@ -112,6 +113,14 @@ public class MDIApplication extends javax.swing.JFrame {
             }
         });
         editMenu.add(certificationParNomMenuItem);
+
+        inscriptionParCertificationMenuItem.setText("Filtrer les inscriptions par certification");
+        inscriptionParCertificationMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inscriptionParCertificationMenuItemActionPerformed(evt);
+            }
+        });
+        editMenu.add(inscriptionParCertificationMenuItem);
 
         menuBar.add(editMenu);
 
@@ -192,6 +201,14 @@ public class MDIApplication extends javax.swing.JFrame {
         centerInternalFrame(cpnf);
     }//GEN-LAST:event_certificationParNomMenuItemActionPerformed
 
+    private void inscriptionParCertificationMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inscriptionParCertificationMenuItemActionPerformed
+        closeAllInternalFrames();
+        InscriptionParCertification ipcf = new InscriptionParCertification();
+        desktopPane.add(ipcf);
+        ipcf.setVisible(true);
+        centerInternalFrame(ipcf);
+    }//GEN-LAST:event_inscriptionParCertificationMenuItemActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -239,6 +256,7 @@ public class MDIApplication extends javax.swing.JFrame {
     private javax.swing.JMenu fileMenu;
     private javax.swing.JMenu helpMenu;
     private javax.swing.JMenuItem inscriptionMenuItem;
+    private javax.swing.JMenuItem inscriptionParCertificationMenuItem;
     private javax.swing.JMenuBar menuBar;
     // End of variables declaration//GEN-END:variables
 

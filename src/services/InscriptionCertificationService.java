@@ -104,4 +104,23 @@ public class InscriptionCertificationService implements IDao<InscriptionCertific
         }
         return inscriptions;
     }
+
+    public List<InscriptionCertification> findByCertification(Certification selectedCertification) {
+        List<InscriptionCertification> inscriptions = new ArrayList<>();
+        String req = "SELECT * FROM InscriptionCertification WHERE certification_id = ?";
+        try (PreparedStatement ps = connexion.getCn().prepareStatement(req)) {
+            ps.setInt(1, selectedCertification.getId());
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                Etudiant etudiant = es.findById(rs.getInt("etudiant_id"));
+                Certification certification = cs.findById(rs.getInt("certification_id"));
+                Date dateInscription = rs.getDate("date_inscription");
+
+                inscriptions.add(new InscriptionCertification(certification, etudiant, dateInscription));
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return inscriptions;
+    }
 }

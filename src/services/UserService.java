@@ -71,4 +71,33 @@ public class UserService implements IUserDao {
         }
         return false;
     }
+    
+    @Override
+    public boolean userExists(String login) {
+        String req = "SELECT * FROM user WHERE login = ?";
+        try {
+            PreparedStatement ps = connexion.getCn().prepareStatement(req);
+            ps.setString(1, login);
+            ResultSet rs = ps.executeQuery();
+            return rs.next(); // Retourne true si l'utilisateur existe, sinon false
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return false;
+    }   
+
+    @Override
+    public boolean updatePassword(String login, String newPassword) {
+        String req = "UPDATE user SET password = MD5(?) WHERE login = ?";
+        try {
+            PreparedStatement ps = connexion.getCn().prepareStatement(req);
+            ps.setString(1, newPassword);
+            ps.setString(2, login);
+            int rowsUpdated = ps.executeUpdate();
+            return rowsUpdated > 0; // Retourne true si la mise à jour a réussi, sinon false
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return false;
+    }
 }
