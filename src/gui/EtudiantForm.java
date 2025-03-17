@@ -6,6 +6,7 @@
 package gui;
 
 import beans.Etudiant;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import services.EtudiantService;
@@ -25,6 +26,7 @@ public class EtudiantForm extends javax.swing.JInternalFrame {
     public EtudiantForm() {
         initComponents();
         this.setTitle("Gestion des Etudiants");
+        setFrameIcon(new ImageIcon(getClass().getResource("/image/professional-certification-icon-logo.png")));
         es = new EtudiantService();
         model = (DefaultTableModel) listeEtudiants.getModel();
         load();

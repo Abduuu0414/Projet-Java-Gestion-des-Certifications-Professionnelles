@@ -6,6 +6,7 @@
 package gui;
 
 import beans.Certification;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import services.CertificationService;
@@ -25,6 +26,7 @@ public class CertificationForm extends javax.swing.JInternalFrame {
     public CertificationForm() {
         initComponents();
         this.setTitle("Gestion des Certifications");
+        setFrameIcon(new ImageIcon(getClass().getResource("/image/professional-certification-icon-logo.png")));
         cs = new CertificationService();
         model = (DefaultTableModel) listeCertifications.getModel();
         load();

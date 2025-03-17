@@ -18,12 +18,22 @@ public class MDIApplication extends javax.swing.JFrame {
     /**
      * Creates new form MDIApplication
      */
-    public MDIApplication() {
+    
+    private static MDIApplication instance;
+    
+    private MDIApplication() {
         setTitle("Gestion des Certifications Professionnelles");
         setExtendedState(MAXIMIZED_BOTH);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setIconImage(new ImageIcon(getClass().getResource("/image/professional-certification-icon-logo.png")).getImage());
         initComponents();
+    }
+    
+    public static MDIApplication getInstance() {
+        if (instance == null) {
+            instance = new MDIApplication();
+        }
+        return instance;
     }
 
     /**
@@ -175,9 +185,11 @@ public class MDIApplication extends javax.swing.JFrame {
     }
     
     private void certificationParNomMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_certificationParNomMenuItemActionPerformed
+        closeAllInternalFrames();
         EtudiantParCertification cpnf = new EtudiantParCertification();
         desktopPane.add(cpnf);
         cpnf.setVisible(true);
+        centerInternalFrame(cpnf);
     }//GEN-LAST:event_certificationParNomMenuItemActionPerformed
 
     /**

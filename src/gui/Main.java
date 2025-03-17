@@ -60,7 +60,7 @@ public class Main extends javax.swing.JFrame {
         jLabel2.setText("Mot de passe :");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 390, -1, -1));
 
-        txtLogin.setFont(new java.awt.Font("Sylfaen", 0, 18)); // NOI18N
+        txtLogin.setFont(new java.awt.Font("Source Sans Pro Light", 1, 18)); // NOI18N
         txtLogin.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         txtLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -69,15 +69,15 @@ public class Main extends javax.swing.JFrame {
         });
         jPanel1.add(txtLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 320, 360, 30));
 
-        txtPassword.setFont(new java.awt.Font("Sylfaen", 0, 18)); // NOI18N
+        txtPassword.setFont(new java.awt.Font("Source Sans Pro Light", 1, 18)); // NOI18N
         txtPassword.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 450, 360, 30));
 
-        bnConnexion.setBackground(new java.awt.Color(153, 153, 255));
+        bnConnexion.setBackground(new java.awt.Color(55, 55, 127));
         bnConnexion.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        bnConnexion.setForeground(new java.awt.Color(53, 53, 124));
+        bnConnexion.setForeground(new java.awt.Color(255, 255, 255));
         bnConnexion.setText("Connexion");
-        bnConnexion.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        bnConnexion.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         bnConnexion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bnConnexionActionPerformed(evt);
@@ -118,7 +118,7 @@ public class Main extends javax.swing.JFrame {
         UserService userService = new UserService();
 
         if (userService.authenticate(login, password)) {
-            MDIApplication mdi = new MDIApplication();
+            MDIApplication mdi = MDIApplication.getInstance();
             mdi.setVisible(true);
             this.setVisible(false);
         } else {

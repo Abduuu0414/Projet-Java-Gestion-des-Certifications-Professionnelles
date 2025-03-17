@@ -8,6 +8,7 @@ package gui;
 import beans.Certification;
 import beans.Etudiant;
 import beans.InscriptionCertification;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import services.CertificationService;
@@ -31,6 +32,7 @@ public class InscriptionForm extends javax.swing.JInternalFrame {
     public InscriptionForm() {
         initComponents();
         this.setTitle("Gestion des Inscriptions");
+        setFrameIcon(new ImageIcon(getClass().getResource("/image/professional-certification-icon-logo.png")));
         listEtudiant.setModel(new javax.swing.DefaultComboBoxModel<>()); // Liste vide
         listCertification.setModel(new javax.swing.DefaultComboBoxModel<>()); // Liste vide
         ics = new InscriptionCertificationService();
