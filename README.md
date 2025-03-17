@@ -19,7 +19,7 @@ La base de données MySQL est composée des tables suivantes :
 
 ### Schéma de la Base de Données
 
-sql
+```sql
 CREATE TABLE Certification (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nom VARCHAR(255) NOT NULL,
@@ -46,3 +46,4 @@ CREATE TABLE User (
     login VARCHAR(50) PRIMARY KEY,
     password CHAR(32) NOT NULL
 );
+```
