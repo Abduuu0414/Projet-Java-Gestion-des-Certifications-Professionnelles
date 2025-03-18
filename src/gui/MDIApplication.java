@@ -106,7 +106,7 @@ public class MDIApplication extends javax.swing.JFrame {
         editMenu.setText("Statistiques");
 
         certificationParNomMenuItem.setMnemonic('t');
-        certificationParNomMenuItem.setText("Rechercher une certification par nom ");
+        certificationParNomMenuItem.setText("Rechercher un etudiant par certification ");
         certificationParNomMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 certificationParNomMenuItemActionPerformed(evt);

@@ -33,12 +33,25 @@ public class EtudiantParCertification extends javax.swing.JInternalFrame {
         es = new EtudiantService();
         model = (DefaultTableModel) listeEtudiants.getModel();
         loadCertifications();
+        load();
     }
     
     public void loadCertifications() {
         listCertification.addItem("Choisir une certification");
         for (Certification c : cs.findAll()) {
             listCertification.addItem(c);
+        }
+    }
+    
+    public void load() {
+        model.setRowCount(0);
+        for (Etudiant e : es.findAll()) {
+            model.addRow(new Object[]{
+                e.getId(),
+                e.getNom(),
+                e.getPrenom(),
+                e.getEmail()
+            });
         }
     }
 
@@ -106,9 +119,9 @@ public class EtudiantParCertification extends javax.swing.JInternalFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(173, 173, 173)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(213, Short.MAX_VALUE))
+                .addGap(139, 139, 139)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 528, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(171, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

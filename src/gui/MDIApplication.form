@@ -57,7 +57,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="certificationParNomMenuItem">
               <Properties>
                 <Property name="mnemonic" type="int" value="116"/>
-                <Property name="text" type="java.lang.String" value="Rechercher une certification par nom "/>
+                <Property name="text" type="java.lang.String" value="Rechercher un etudiant par certification "/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="certificationParNomMenuItemActionPerformed"/>

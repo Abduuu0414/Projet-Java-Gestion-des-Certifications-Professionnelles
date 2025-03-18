@@ -83,6 +83,7 @@ public class Main extends javax.swing.JFrame {
         bnConnexion.setText("Connexion");
         bnConnexion.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         bnConnexion.setBorderPainted(false);
+        bnConnexion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         bnConnexion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bnConnexionActionPerformed(evt);
