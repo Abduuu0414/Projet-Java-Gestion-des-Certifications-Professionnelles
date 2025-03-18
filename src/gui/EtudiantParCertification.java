@@ -73,8 +73,11 @@ public class EtudiantParCertification extends javax.swing.JInternalFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Choix de Certification"));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel1.setFont(new java.awt.Font("Arial", 1, 13)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(47, 45, 141));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/certificate-icon.png"))); // NOI18N
         jLabel1.setText("Certification : ");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 50, -1, 40));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 50, -1, 40));
 
         listCertification.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

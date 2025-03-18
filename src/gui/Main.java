@@ -97,6 +97,9 @@ public class Main extends javax.swing.JFrame {
 
         jLabel4.setForeground(new java.awt.Color(48, 48, 119));
         jLabel4.setText("mot de passe oublie?");
+        jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel4.setDoubleBuffered(true);
+        jLabel4.setFocusCycleRoot(true);
         jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel4MouseClicked(evt);

@@ -99,6 +99,7 @@ public class InscriptionParCertification extends javax.swing.JInternalFrame {
         jPanel5.setFont(new java.awt.Font("Arial", 1, 13)); // NOI18N
         jPanel5.setLayout(new java.awt.GridBagLayout());
 
+        listeInscriptions.setBackground(new java.awt.Color(204, 204, 255));
         listeInscriptions.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         listeInscriptions.setFont(new java.awt.Font("Arial", 1, 13)); // NOI18N
         listeInscriptions.setModel(new javax.swing.table.DefaultTableModel(
@@ -186,36 +187,24 @@ public class InscriptionParCertification extends javax.swing.JInternalFrame {
 
         getContentPane().add(jInternalFrame1, new org.netbeans.lib.awtextra.AbsoluteConstraints(442, 273, 0, 0));
 
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Choix de Certification"));
         jPanel3.setFont(new java.awt.Font("Arial", 1, 13)); // NOI18N
-        jPanel3.setLayout(new java.awt.GridBagLayout());
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Arial", 1, 13)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(47, 45, 141));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/certificate-icon.png"))); // NOI18N
         jLabel2.setText("Certification : ");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridheight = 2;
-        gridBagConstraints.ipady = 24;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(50, 180, 70, 0);
-        jPanel3.add(jLabel2, gridBagConstraints);
+        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(158, 49, -1, 54));
 
-        listCertification1.setForeground(new java.awt.Color(204, 204, 255));
-        listCertification1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        listCertification1.setForeground(new java.awt.Color(255, 255, 255));
+        listCertification1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         listCertification1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 listCertification1ActionPerformed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.ipadx = 274;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(60, 29, 0, 185);
-        jPanel3.add(listCertification1, gridBagConstraints);
+        jPanel3.add(listCertification1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 60, 307, 30));
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 780, 160));
 

@@ -76,17 +76,28 @@ public class CertificationForm extends javax.swing.JInternalFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Gestion des certification"));
 
+        jLabel1.setFont(new java.awt.Font("Arial", 1, 13)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(47, 45, 141));
         jLabel1.setText("Nom : ");
 
+        jLabel2.setFont(new java.awt.Font("Arial", 1, 13)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(47, 45, 141));
         jLabel2.setText("Organisme : ");
 
+        bnAdd.setFont(new java.awt.Font("Arial", 1, 13)); // NOI18N
+        bnAdd.setForeground(new java.awt.Color(92, 124, 250));
+        bnAdd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/add-icon.png"))); // NOI18N
         bnAdd.setText("Ajouter");
+        bnAdd.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         bnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bnAddActionPerformed(evt);
             }
         });
 
+        bnDelete.setFont(new java.awt.Font("Arial", 1, 13)); // NOI18N
+        bnDelete.setForeground(new java.awt.Color(250, 82, 82));
+        bnDelete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/delete-icon.png"))); // NOI18N
         bnDelete.setText("Supprimer");
         bnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,13 +105,19 @@ public class CertificationForm extends javax.swing.JInternalFrame {
             }
         });
 
+        bnUpdate.setFont(new java.awt.Font("Arial", 1, 13)); // NOI18N
+        bnUpdate.setForeground(new java.awt.Color(32, 201, 151));
+        bnUpdate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/modify-icon.png"))); // NOI18N
         bnUpdate.setText("Modifier");
+        bnUpdate.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         bnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bnUpdateActionPerformed(evt);
             }
         });
 
+        jLabel3.setFont(new java.awt.Font("Arial", 1, 13)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(47, 45, 141));
         jLabel3.setText("Cout :");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -123,7 +140,7 @@ public class CertificationForm extends javax.swing.JInternalFrame {
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(bnDelete, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(bnUpdate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(bnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(bnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -133,17 +150,17 @@ public class CertificationForm extends javax.swing.JInternalFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(txtNom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bnAdd))
+                    .addComponent(bnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(txtOrganisme, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bnDelete))
+                    .addComponent(bnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(txtCout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bnUpdate))
+                    .addComponent(bnUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 

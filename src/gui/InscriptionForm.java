@@ -99,44 +99,66 @@ public class InscriptionForm extends javax.swing.JInternalFrame {
         setAlignmentY(100.0F);
         setPreferredSize(new java.awt.Dimension(800, 600));
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Gestion des inscriptions"));
 
-        jLabel1.setText("Etudiant : ");
+        jLabel1.setFont(new java.awt.Font("Arial", 1, 13)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(47, 45, 141));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/student-icon.png"))); // NOI18N
+        jLabel1.setText("Etudiant               : ");
 
-        jLabel2.setText("Certification :");
+        jLabel2.setFont(new java.awt.Font("Arial", 1, 13)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(47, 45, 141));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/certificate-icon.png"))); // NOI18N
+        jLabel2.setText("Certification         :");
 
+        bnAdd.setBackground(new java.awt.Color(47, 45, 141));
+        bnAdd.setFont(new java.awt.Font("Arial", 1, 13)); // NOI18N
+        bnAdd.setForeground(new java.awt.Color(255, 255, 255));
         bnAdd.setText("Ajouter");
+        bnAdd.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        bnAdd.setBorderPainted(false);
         bnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bnAddActionPerformed(evt);
             }
         });
 
+        jLabel3.setFont(new java.awt.Font("Arial", 1, 13)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(47, 45, 141));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/date-icon.png"))); // NOI18N
         jLabel3.setText("Date d'inscription :");
 
+        listEtudiant.setFont(new java.awt.Font("Arial", 1, 13)); // NOI18N
         listEtudiant.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        listEtudiant.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        listCertification.setFont(new java.awt.Font("Arial", 1, 13)); // NOI18N
         listCertification.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        dateChooser.setFont(new java.awt.Font("Arial", 1, 13)); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel3))
-                .addGap(32, 32, 32)
+                .addGap(101, 101, 101)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(32, 32, 32))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addGap(64, 64, 64)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(listEtudiant, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(listCertification, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(dateChooser, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(bnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(65, 65, 65))
+                    .addComponent(dateChooser, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 131, Short.MAX_VALUE)
+                .addComponent(bnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(98, 98, 98))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -149,9 +171,9 @@ public class InscriptionForm extends javax.swing.JInternalFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(listCertification, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bnAdd))
+                    .addComponent(bnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel3)
                     .addComponent(dateChooser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
