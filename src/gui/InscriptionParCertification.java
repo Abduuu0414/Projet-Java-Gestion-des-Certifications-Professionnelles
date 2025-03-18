@@ -99,7 +99,6 @@ public class InscriptionParCertification extends javax.swing.JInternalFrame {
         jPanel5.setFont(new java.awt.Font("Arial", 1, 13)); // NOI18N
         jPanel5.setLayout(new java.awt.GridBagLayout());
 
-        listeInscriptions.setBackground(new java.awt.Color(204, 204, 255));
         listeInscriptions.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         listeInscriptions.setFont(new java.awt.Font("Arial", 1, 13)); // NOI18N
         listeInscriptions.setModel(new javax.swing.table.DefaultTableModel(
@@ -187,6 +186,7 @@ public class InscriptionParCertification extends javax.swing.JInternalFrame {
 
         getContentPane().add(jInternalFrame1, new org.netbeans.lib.awtextra.AbsoluteConstraints(442, 273, 0, 0));
 
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Choix de Certification"));
         jPanel3.setFont(new java.awt.Font("Arial", 1, 13)); // NOI18N
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
