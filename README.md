@@ -7,7 +7,7 @@ Ce projet est une application de gestion des certifications professionnelles. Il
 - **Ajouter une certification** : Permet d'ajouter une nouvelle certification avec son nom, l'organisme et le coût.
 - **Inscrire un étudiant** : Permet d'ajouter un nouvel étudiant avec son nom, prénom et email.
 - **Filtrer les inscriptions par certification** : Permet de lister les inscriptions pour une certification donnée.
-- **Rechercher une certification par nom** : Permet de rechercher une certification par son nom.
+- **Rechercher un étudiant par certification** : Permet de rechercher une certification par son nom.
 
 ## Structure de la Base de Données
 
