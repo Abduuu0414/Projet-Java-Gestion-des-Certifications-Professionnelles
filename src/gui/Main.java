@@ -75,6 +75,11 @@ public class Main extends javax.swing.JFrame {
 
         txtPassword.setFont(new java.awt.Font("Source Sans Pro Light", 1, 18)); // NOI18N
         txtPassword.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        txtPassword.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPasswordActionPerformed(evt);
+            }
+        });
         jPanel1.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 450, 360, 30));
 
         bnConnexion.setBackground(new java.awt.Color(55, 55, 127));
@@ -173,6 +178,10 @@ public class Main extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Le login ne peut pas être vide.");
         }
     }//GEN-LAST:event_jLabel4MouseClicked
+
+    private void txtPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPasswordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPasswordActionPerformed
 
     /**
      * @param args the command line arguments

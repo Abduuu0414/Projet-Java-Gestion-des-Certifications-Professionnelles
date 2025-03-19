@@ -65,11 +65,7 @@ public class InscriptionParCertification extends javax.swing.JInternalFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        java.awt.GridBagConstraints gridBagConstraints;
 
-        jPanel5 = new javax.swing.JPanel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        listeInscriptions = new javax.swing.JTable();
         jInternalFrame1 = new javax.swing.JInternalFrame();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -77,10 +73,14 @@ public class InscriptionParCertification extends javax.swing.JInternalFrame {
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         listeEtudiants = new javax.swing.JTable();
+        jPanel4 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         listCertification1 = new javax.swing.JComboBox();
-        jPanel4 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jPanel5 = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        listeInscriptions = new javax.swing.JTable();
 
         setClosable(true);
         setIconifiable(true);
@@ -92,38 +92,7 @@ public class InscriptionParCertification extends javax.swing.JInternalFrame {
         setAutoscrolls(true);
         setMinimumSize(new java.awt.Dimension(800, 600));
         setPreferredSize(new java.awt.Dimension(800, 600));
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder("Liste des inscriptions"));
-        jPanel5.setFont(new java.awt.Font("Arial", 1, 13)); // NOI18N
-        jPanel5.setLayout(new java.awt.GridBagLayout());
-
-        listeInscriptions.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        listeInscriptions.setFont(new java.awt.Font("Arial", 1, 13)); // NOI18N
-        listeInscriptions.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "Certification", "Etudiant", "Date d'inscription"
-            }
-        ));
-        jScrollPane3.setViewportView(listeInscriptions);
-
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.ipadx = 663;
-        gridBagConstraints.ipady = 217;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.weighty = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(59, 39, 163, 51);
-        jPanel5.add(jScrollPane3, gridBagConstraints);
-
-        getContentPane().add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 780, 470));
+        getContentPane().setLayout(new javax.swing.OverlayLayout(getContentPane()));
 
         jInternalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder("Liste des Etudiants"));
         jInternalFrame1.setClosable(true);
@@ -184,7 +153,7 @@ public class InscriptionParCertification extends javax.swing.JInternalFrame {
 
         jInternalFrame1.getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 860, 400));
 
-        getContentPane().add(jInternalFrame1, new org.netbeans.lib.awtextra.AbsoluteConstraints(442, 273, 0, 0));
+        getContentPane().add(jInternalFrame1);
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Choix de Certification"));
@@ -206,20 +175,67 @@ public class InscriptionParCertification extends javax.swing.JInternalFrame {
         });
         jPanel3.add(listCertification1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 60, 307, 30));
 
-        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 780, 160));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bg-certificate.jpg"))); // NOI18N
+        jLabel3.setText("jLabel3");
+        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 0, 800, 130));
+
+        jPanel5.setBackground(new java.awt.Color(230, 251, 253));
+        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Liste des inscriptions", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 16), new java.awt.Color(29, 140, 171))); // NOI18N
+        jPanel5.setForeground(new java.awt.Color(201, 255, 255));
+        jPanel5.setFont(new java.awt.Font("Arial", 1, 13)); // NOI18N
+
+        listeInscriptions.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        listeInscriptions.setFont(new java.awt.Font("Arial", 1, 13)); // NOI18N
+        listeInscriptions.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Certification", "Etudiant", "Date d'inscription"
+            }
+        ));
+        jScrollPane3.setViewportView(listeInscriptions);
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(39, 39, 39)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 678, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(59, 59, 59)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(158, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(5, 5, 5))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(5, 5, 5))
         );
 
-        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 590, -1, -1));
+        jPanel3.getAccessibleContext().setAccessibleParent(jInternalFrame1);
+        jPanel5.getAccessibleContext().setAccessibleParent(jInternalFrame1);
+
+        getContentPane().add(jPanel4);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -246,7 +262,7 @@ public class InscriptionParCertification extends javax.swing.JInternalFrame {
                 model.addRow(new Object[]{
                     ic.getCertification().getNom(), // Certification
                     ic.getEtudiant().getNom(),     // Etudiant
-                    ic.getDateInscription() 
+                    ic.getDateInscription()
                 });
             }
         }
@@ -257,6 +273,7 @@ public class InscriptionParCertification extends javax.swing.JInternalFrame {
     private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
