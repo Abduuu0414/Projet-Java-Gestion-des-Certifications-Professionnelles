@@ -288,7 +288,7 @@
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                 <TitledBorder justification="2" title="Liste des inscriptions">
-                  <Font PropertyName="font" name="Tahoma" size="16" style="1"/>
+                  <Font PropertyName="font" name="Times New Roman" size="18" style="3"/>
                   <Color PropertyName="color" blue="ab" green="8c" red="1d" type="rgb"/>
                 </TitledBorder>
               </Border>
@@ -321,7 +321,7 @@
                   <Group type="102" attributes="0">
                       <EmptySpace min="59" pref="59" max="-2" attributes="0"/>
                       <Component id="jScrollPane3" min="-2" pref="223" max="-2" attributes="0"/>
-                      <EmptySpace pref="158" max="32767" attributes="0"/>
+                      <EmptySpace pref="156" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -337,8 +337,10 @@
                 <Component class="javax.swing.JTable" name="listeInscriptions">
                   <Properties>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
-                        <EtchetBorder/>
+                      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                        <LineBorder thickness="2">
+                          <Color PropertyName="color" blue="8d" green="2d" red="2f" type="rgb"/>
+                        </LineBorder>
                       </Border>
                     </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">

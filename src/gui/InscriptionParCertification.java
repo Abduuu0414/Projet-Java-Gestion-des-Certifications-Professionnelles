@@ -180,11 +180,11 @@ public class InscriptionParCertification extends javax.swing.JInternalFrame {
         jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 0, 800, 130));
 
         jPanel5.setBackground(new java.awt.Color(230, 251, 253));
-        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Liste des inscriptions", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 16), new java.awt.Color(29, 140, 171))); // NOI18N
+        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Liste des inscriptions", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 3, 18), new java.awt.Color(29, 140, 171))); // NOI18N
         jPanel5.setForeground(new java.awt.Color(201, 255, 255));
         jPanel5.setFont(new java.awt.Font("Arial", 1, 13)); // NOI18N
 
-        listeInscriptions.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        listeInscriptions.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(47, 45, 141), 2));
         listeInscriptions.setFont(new java.awt.Font("Arial", 1, 13)); // NOI18N
         listeInscriptions.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -210,7 +210,7 @@ public class InscriptionParCertification extends javax.swing.JInternalFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(59, 59, 59)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(158, Short.MAX_VALUE))
+                .addContainerGap(156, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);

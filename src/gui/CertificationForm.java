@@ -74,7 +74,7 @@ public class CertificationForm extends javax.swing.JInternalFrame {
         setPreferredSize(new java.awt.Dimension(800, 600));
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Gestion des certification", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 18), new java.awt.Color(47, 45, 141))); // NOI18N
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Gestion des certification", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 3, 18), new java.awt.Color(47, 45, 141))); // NOI18N
         jPanel1.setForeground(new java.awt.Color(47, 45, 141));
         jPanel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
 
@@ -170,7 +170,7 @@ public class CertificationForm extends javax.swing.JInternalFrame {
         );
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Liste des certifications", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14), new java.awt.Color(47, 45, 141))); // NOI18N
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Liste des certifications", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 3, 16), new java.awt.Color(47, 45, 141))); // NOI18N
 
         listeCertifications.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

@@ -99,7 +99,7 @@ public class InscriptionForm extends javax.swing.JInternalFrame {
         setAlignmentY(100.0F);
         setPreferredSize(new java.awt.Dimension(800, 600));
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Gestion des inscriptions", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 16), new java.awt.Color(47, 45, 141))); // NOI18N
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Gestion des inscriptions", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 3, 18), new java.awt.Color(47, 45, 141))); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 13)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(47, 45, 141));
@@ -181,10 +181,9 @@ public class InscriptionForm extends javax.swing.JInternalFrame {
                 .addContainerGap())
         );
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Liste des inscriptions", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14), new java.awt.Color(47, 45, 141))); // NOI18N
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Liste des inscriptions", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 3, 16), new java.awt.Color(47, 45, 141))); // NOI18N
 
-        listeInscriptions.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(47, 45, 141), 6, true));
+        listeInscriptions.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(47, 45, 141), 2, true));
         listeInscriptions.setForeground(new java.awt.Color(47, 45, 141));
         listeInscriptions.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

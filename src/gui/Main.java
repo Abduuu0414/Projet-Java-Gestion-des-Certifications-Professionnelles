@@ -5,8 +5,10 @@
  */
 package gui;
 
+import java.util.UUID;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+import services.EmailSender;
 import services.UserService;
 
 /**
@@ -44,6 +46,8 @@ public class Main extends javax.swing.JFrame {
         bnConnexion = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -96,10 +100,10 @@ public class Main extends javax.swing.JFrame {
         });
         jPanel1.add(bnConnexion, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 560, 370, 40));
 
-        jLabel5.setFont(new java.awt.Font("Algerian", 0, 24)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Cormorant Infant", 3, 40)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(48, 48, 119));
         jLabel5.setText("Certification Professionelles");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, -1, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 90, -1, -1));
 
         jLabel4.setForeground(new java.awt.Color(48, 48, 119));
         jLabel4.setText("mot de passe oublie?");
@@ -113,6 +117,22 @@ public class Main extends javax.swing.JFrame {
         });
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 490, 140, 20));
 
+        jLabel8.setFont(new java.awt.Font("Times New Roman", 3, 16)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(48, 48, 119));
+        jLabel8.setText("Pas de compte ? S'inscrire");
+        jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel8MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 610, -1, -1));
+
+        jLabel7.setFont(new java.awt.Font("Times New Roman", 2, 20)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(48, 48, 119));
+        jLabel7.setText("Connexion à votre espace personnel");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 160, -1, -1));
+
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/login-page.png"))); // NOI18N
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 780));
 
@@ -120,7 +140,7 @@ public class Main extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -150,26 +170,22 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_bnConnexionActionPerformed
 
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
-        // Demander à l'utilisateur de saisir son login
+
         String login = JOptionPane.showInputDialog(this, "Veuillez saisir votre login :");
 
         if (login != null && !login.trim().isEmpty()) {
             UserService userService = new UserService();
 
-            // Verifier si le login existe
             if (userService.userExists(login)) {
-                // Demander a l'utilisateur de saisir un nouveau mot de passe
-                String newPassword = JOptionPane.showInputDialog(this, "Veuillez saisir votre nouveau mot de passe :");
+                
+                String newPassword = generateTemporaryPassword();
 
-                if (newPassword != null && !newPassword.trim().isEmpty()) {
-                    // Mettre a jour le mot de passe dans la base de donnees
-                    if (userService.updatePassword(login, newPassword)) {
-                        JOptionPane.showMessageDialog(this, "Mot de passe mis à jour avec succès !");
-                    } else {
-                        JOptionPane.showMessageDialog(this, "Erreur lors de la mise à jour du mot de passe.");
-                    }
+                EmailSender.sendEmail(login, newPassword);
+
+                if (userService.updatePassword(login, newPassword)) {
+                    JOptionPane.showMessageDialog(this, "Un nouveau mot de passe temporaire a été envoyé à votre adresse email.");
                 } else {
-                    JOptionPane.showMessageDialog(this, "Le mot de passe ne peut pas être vide.");
+                    JOptionPane.showMessageDialog(this, "Erreur lors de la mise à jour du mot de passe.");
                 }
             } else {
                 JOptionPane.showMessageDialog(this, "Login introuvable.");
@@ -179,9 +195,19 @@ public class Main extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jLabel4MouseClicked
 
+    // methode pour generer un mot de passe temporaire
+    private String generateTemporaryPassword() {
+        return UUID.randomUUID().toString().substring(0, 8); // genere password de 8 characters
+    }
+    
     private void txtPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPasswordActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtPasswordActionPerformed
+
+    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
+        new Signup().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jLabel8MouseClicked
 
     /**
      * @param args the command line arguments
@@ -225,8 +251,11 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField txtLogin;
     private javax.swing.JPasswordField txtPassword;
     // End of variables declaration//GEN-END:variables
+
 }
