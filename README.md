@@ -35,7 +35,6 @@ CREATE TABLE Étudiant (
 );
 
 CREATE TABLE InscriptionCertification (
-    id INT AUTO_INCREMENT PRIMARY KEY,
     certification_id INT NOT NULL,
     etudiant_id INT NOT NULL,
     date_inscription DATE NOT NULL,
