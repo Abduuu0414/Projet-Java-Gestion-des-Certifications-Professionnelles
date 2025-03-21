@@ -9,6 +9,17 @@ Ce projet est une application de gestion des certifications professionnelles. Il
 - **Filtrer les inscriptions par certification** : Permet de lister les inscriptions pour une certification donnée.
 - **Rechercher un étudiant par certification** : Permet de rechercher une certification par son nom.
 
+## Digramme de cas d'utilisation
+
+![image](https://github.com/user-attachments/assets/223485c7-956e-4bf7-8f0d-ec99c54ad15f)
+
+
+## Diagramme de classe
+
+![image](https://github.com/user-attachments/assets/60b600fd-9ebf-4727-89fe-af77aeb922ee)
+
+
+
 ## Structure de la Base de Données
 
 La base de données MySQL est composée des tables suivantes :
