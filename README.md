@@ -184,13 +184,6 @@ L'architecture du projet suit une structure **MVC (Modèle-Vue-Contrôleur)** :
 
 Cette structure permet une séparation claire des responsabilités et facilite la maintenance et l'évolution de l'application.
 
-
-### Architecture Logique
-1. **Couche Présentation** : Gérée par Swing pour l'interface utilisateur.
-2. **Couche Métier** : Contient la logique de gestion des certifications, des étudiants et des inscriptions.
-3. **Couche Données** : Gère les interactions avec la base de données MySQL via JDBC.
-4. **Bibliothèques Externes** : Utilisées pour étendre les fonctionnalités (JCalendar pour les dates, JFreeChart pour les graphiques).
-
 ---
 
 ## Vidéo Démonstrative
