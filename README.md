@@ -87,6 +87,11 @@ CREATE TABLE User (
 
 ## Architecture du Projet
 
+Voici l'architecture logicielle en couches (Layered Architecture) :
+
+![Layered Architecture](https://github.com/user-attachments/assets/5a405852-ad3c-4abc-a503-7fb29b7d7a0a)
+
+
 Voici la structure du projet **GestionCertificationsProfessionnelles** :
 
 ```
