@@ -86,6 +86,9 @@ CREATE TABLE User (
 
 ## Architecture du Projet
 
+Voici la structure du projet **GestionCertificationsProfessionnelles** :
+
+```
 GestionCertificationsProfessionnelles/
 ├── src/
 │   ├── beans/                # Modèles de données (Certification, Étudiant, etc.)
@@ -116,6 +119,69 @@ GestionCertificationsProfessionnelles/
 │   └── autres fichiers .jar
 ├── resources/                # Ressources (images, fichiers de configuration)
 └── README.md                 # Documentation du projet
+```
+
+### Description des Dossiers et Fichiers
+
+1. **`src/beans/`**  
+   Contient les classes modèles représentant les entités de l'application :
+   - `Certification.java` : Modèle pour les certifications.
+   - `Etudiant.java` : Modèle pour les étudiants.
+   - `InscriptionCertification.java` : Modèle pour les inscriptions aux certifications.
+   - `User.java` : Modèle pour les utilisateurs de l'application.
+
+2. **`src/connexion/`**  
+   Contient les classes et configurations pour la connexion à la base de données MySQL.
+
+3. **`src/dao/`**  
+   Contient les classes **DAO (Data Access Object)** pour interagir avec la base de données :
+   - Exemple : `CertificationDAO.java`, `EtudiantDAO.java`, etc.
+
+4. **`src/gui/`**  
+   Contient les interfaces graphiques développées avec **Swing** :
+   - `CertificationChartForm.java` : Interface pour afficher les graphiques des certifications.
+   - `CertificationForm.java` : Interface pour gérer les certifications.
+   - `EtudiantForm.java` : Interface pour gérer les étudiants.
+   - `InscriptionForm.java` : Interface pour gérer les inscriptions.
+   - `InscriptionParCertification.java` : Interface pour filtrer les inscriptions par certification.
+   - `MDIApplication.java` : Interface principale de l'application (MDI - Multiple Document Interface).
+   - `Main.java` : Point d'entrée de l'application.
+   - `Signup.java` : Interface pour l'inscription des utilisateurs.
+
+5. **`src/services/`**  
+   Contient les classes de services pour la logique métier :
+   - `CertificationService.java` : Service pour la gestion des certifications.
+   - `EmailSender.java` : Service pour l'envoi d'emails.
+   - `EtudiantService.java` : Service pour la gestion des étudiants.
+   - `InscriptionCertificationService.java` : Service pour la gestion des inscriptions.
+   - `UserService.java` : Service pour la gestion des utilisateurs.
+
+6. **`src/test/`**  
+   Contient les tests unitaires pour valider les fonctionnalités de l'application.
+
+7. **`lib/`**  
+   Contient les bibliothèques externes utilisées dans le projet :
+   - `jcalendar-1.4.jar` : Pour la gestion des dates dans l'interface graphique.
+   - Autres fichiers `.jar` : MySQL Connector/J, JFreeChart, etc.
+
+8. **`resources/`**  
+   Contient les ressources de l'application, telles que :
+   - Images pour l'interface graphique.
+   - Fichiers de configuration (ex : `config.properties`).
+
+9. **`README.md`**  
+   Documentation du projet, expliquant son contexte, ses fonctionnalités, son architecture, et son utilisation.
+
+---
+
+### Visualisation de l'Architecture
+
+L'architecture du projet suit une structure **MVC (Modèle-Vue-Contrôleur)** :
+- **Modèle** : Géré par les classes dans `src/beans/` et `src/dao/`.
+- **Vue** : Gérée par les interfaces graphiques dans `src/gui/`.
+- **Contrôleur** : Géré par les classes dans `src/services/`.
+
+Cette structure permet une séparation claire des responsabilités et facilite la maintenance et l'évolution de l'application.
 
 
 ### Architecture Logique
