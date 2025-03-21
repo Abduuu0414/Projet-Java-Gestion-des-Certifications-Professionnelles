@@ -24,7 +24,8 @@ L'objectif de ce projet est de développer une application qui simplifie la gest
 ## Fonctionnalités Principales
 - **Gestion des Certifications** : Ajout et suppression de certifications.
 - **Inscription des Étudiants** : Enregistrement des étudiants et de leurs inscriptions aux certifications.
-- **Filtrage des Inscriptions** : Filtrage des inscriptions par certification ou étudiant.
+- **Filtrage des Inscriptions** : Filtrage des inscriptions par certification.
+- **Filtrage des Étudiants** : Filtrage des étudiants par certification.
 - **Recherche de Certifications** : Recherche rapide de certifications par nom ou organisme.
 - **Visualisation des Données** : Graphique Pie Chart pour analyser le taux d'inscription par certification.
 
