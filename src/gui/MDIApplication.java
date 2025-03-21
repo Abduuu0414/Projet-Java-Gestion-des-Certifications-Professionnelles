@@ -55,6 +55,7 @@ public class MDIApplication extends javax.swing.JFrame {
         editMenu = new javax.swing.JMenu();
         certificationParNomMenuItem = new javax.swing.JMenuItem();
         inscriptionParCertificationMenuItem = new javax.swing.JMenuItem();
+        GrapheMenuItem = new javax.swing.JMenuItem();
         helpMenu = new javax.swing.JMenu();
         contentMenuItem = new javax.swing.JMenuItem();
         aboutMenuItem = new javax.swing.JMenuItem();
@@ -121,6 +122,14 @@ public class MDIApplication extends javax.swing.JFrame {
             }
         });
         editMenu.add(inscriptionParCertificationMenuItem);
+
+        GrapheMenuItem.setText("Graphe Nombre d’inscrits par certification (Bar chart) ");
+        GrapheMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GrapheMenuItemActionPerformed(evt);
+            }
+        });
+        editMenu.add(GrapheMenuItem);
 
         menuBar.add(editMenu);
 
@@ -209,6 +218,14 @@ public class MDIApplication extends javax.swing.JFrame {
         centerInternalFrame(ipcf);
     }//GEN-LAST:event_inscriptionParCertificationMenuItemActionPerformed
 
+    private void GrapheMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GrapheMenuItemActionPerformed
+        closeAllInternalFrames();
+        CertificationChartForm chartForm = new CertificationChartForm();
+        chartForm.setVisible(true);
+        desktopPane.add(chartForm);
+        centerInternalFrame(chartForm);
+    }//GEN-LAST:event_GrapheMenuItemActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -245,6 +262,7 @@ public class MDIApplication extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem GrapheMenuItem;
     private javax.swing.JMenuItem aboutMenuItem;
     private javax.swing.JMenuItem certificationMenuItem;
     private javax.swing.JMenuItem certificationParNomMenuItem;
