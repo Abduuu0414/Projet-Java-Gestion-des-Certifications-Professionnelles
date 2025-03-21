@@ -11,7 +11,8 @@ Ce projet est une application de gestion des certifications professionnelles. Il
 
 ## Digramme de cas d'utilisation
 
-![image](https://github.com/user-attachments/assets/223485c7-956e-4bf7-8f0d-ec99c54ad15f)
+![image](https://github.com/user-attachments/assets/1a20e16e-49b4-49b5-936b-e6dfaff3b857)
+
 
 
 ## Diagramme de classe
