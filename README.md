@@ -38,7 +38,8 @@ L'objectif de ce projet est de développer une application qui simplifie la gest
 
 
 ### Diagramme de Classe
-![Diagramme de Classe](https://github.com/user-attachments/assets/60b600fd-9ebf-4727-89fe-af77aeb922ee)
+![image](https://github.com/user-attachments/assets/095d4258-419c-471c-8cd8-29ed7e3b584c)
+
 
 ---
 
