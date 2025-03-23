@@ -18,7 +18,7 @@ public class EmailSender {
 
     public static void sendEmail(String toEmail, String newPassword) {
         final String username = "a.bouanani2566@uca.ac.ma"; // Remplacez par votre email
-        final String password = "a.bouanani#EE748684";
+        final String password = "qqoo vwym tnad nymc";
 
         // configuration des props pour SMTP
         Properties props = new Properties();
