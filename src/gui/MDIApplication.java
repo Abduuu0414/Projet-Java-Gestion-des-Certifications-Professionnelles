@@ -55,10 +55,7 @@ public class MDIApplication extends javax.swing.JFrame {
         editMenu = new javax.swing.JMenu();
         certificationParNomMenuItem = new javax.swing.JMenuItem();
         inscriptionParCertificationMenuItem = new javax.swing.JMenuItem();
-        GrapheMenuItem = new javax.swing.JMenuItem();
         helpMenu = new javax.swing.JMenu();
-        contentMenuItem = new javax.swing.JMenuItem();
-        aboutMenuItem = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -104,7 +101,7 @@ public class MDIApplication extends javax.swing.JFrame {
         menuBar.add(fileMenu);
 
         editMenu.setMnemonic('e');
-        editMenu.setText("Statistiques");
+        editMenu.setText("Recherches");
 
         certificationParNomMenuItem.setMnemonic('t');
         certificationParNomMenuItem.setText("Rechercher un etudiant par certification ");
@@ -123,27 +120,15 @@ public class MDIApplication extends javax.swing.JFrame {
         });
         editMenu.add(inscriptionParCertificationMenuItem);
 
-        GrapheMenuItem.setText("Graphe Nombre d’inscrits par certification (Bar chart) ");
-        GrapheMenuItem.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                GrapheMenuItemActionPerformed(evt);
-            }
-        });
-        editMenu.add(GrapheMenuItem);
-
         menuBar.add(editMenu);
 
         helpMenu.setMnemonic('h');
-        helpMenu.setText("Help");
-
-        contentMenuItem.setMnemonic('c');
-        contentMenuItem.setText("Contents");
-        helpMenu.add(contentMenuItem);
-
-        aboutMenuItem.setMnemonic('a');
-        aboutMenuItem.setText("About");
-        helpMenu.add(aboutMenuItem);
-
+        helpMenu.setText("Statistiques");
+        helpMenu.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                helpMenuMouseClicked(evt);
+            }
+        });
         menuBar.add(helpMenu);
 
         setJMenuBar(menuBar);
@@ -218,13 +203,13 @@ public class MDIApplication extends javax.swing.JFrame {
         centerInternalFrame(ipcf);
     }//GEN-LAST:event_inscriptionParCertificationMenuItemActionPerformed
 
-    private void GrapheMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GrapheMenuItemActionPerformed
+    private void helpMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_helpMenuMouseClicked
         closeAllInternalFrames();
         CertificationChartForm chartForm = new CertificationChartForm();
         chartForm.setVisible(true);
         desktopPane.add(chartForm);
         centerInternalFrame(chartForm);
-    }//GEN-LAST:event_GrapheMenuItemActionPerformed
+    }//GEN-LAST:event_helpMenuMouseClicked
 
     /**
      * @param args the command line arguments
@@ -262,11 +247,8 @@ public class MDIApplication extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenuItem GrapheMenuItem;
-    private javax.swing.JMenuItem aboutMenuItem;
     private javax.swing.JMenuItem certificationMenuItem;
     private javax.swing.JMenuItem certificationParNomMenuItem;
-    private javax.swing.JMenuItem contentMenuItem;
     private javax.swing.JDesktopPane desktopPane;
     private javax.swing.JMenu editMenu;
     private javax.swing.JMenuItem etudiantMenuItem;
