@@ -41,11 +41,12 @@ L'objectif de ce projet est de développer une application qui simplifie la gest
 ## Diagrammes UML
 
 ### Diagramme de Cas d'Utilisation
-![image](https://github.com/user-attachments/assets/1763b80e-94ae-4e38-9dc3-9b7753b7f70a)
+![use case diagram](https://github.com/user-attachments/assets/1763b80e-94ae-4e38-9dc3-9b7753b7f70a)
 
 
 ### Diagramme de Classe
-![image](https://github.com/user-attachments/assets/095d4258-419c-471c-8cd8-29ed7e3b584c)
+![class diagram](https://github.com/user-attachments/assets/e0ec61a3-88f7-41fa-bf56-e78010bb6567)
+
 
 
 ---
