@@ -29,6 +29,13 @@ L'objectif de ce projet est de développer une application qui simplifie la gest
 - **Recherche de Certifications** : Recherche rapide de certifications par nom ou organisme.
 - **Visualisation des Données** : Graphique Pie Chart pour analyser le taux d'inscription par certification.
 
+
+---
+
+## 🏷️ Logo
+![Logo](https://github.com/user-attachments/assets/e9474565-b7bd-483f-bea7-b3530a99ff9d)
+
+
 ---
 
 ## Diagrammes UML
