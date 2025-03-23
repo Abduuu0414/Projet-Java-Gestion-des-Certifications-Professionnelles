@@ -37,32 +37,32 @@ public class CertificationChartForm extends javax.swing.JInternalFrame {
     }
     
     private void displayChart() {
-    DefaultCategoryDataset dataset = createDataset();
-    JFreeChart barChart = ChartFactory.createBarChart(
-            "Nombre d'inscrits par certification",
-            "Certification",
-            "Nombre d'inscrits",
-            dataset,
-            PlotOrientation.VERTICAL,
-            true, true, false);
+        DefaultCategoryDataset dataset = createDataset();
+        JFreeChart barChart = ChartFactory.createBarChart(
+                "Nombre d'inscrits par certification",
+                "Certification",
+                "Nombre d'inscrits",
+                dataset,
+                PlotOrientation.VERTICAL,
+                true, true, false);
 
-    // Obtenir le renderer du graphique
-    org.jfree.chart.plot.CategoryPlot plot = barChart.getCategoryPlot();
-    org.jfree.chart.renderer.category.BarRenderer renderer = (org.jfree.chart.renderer.category.BarRenderer) plot.getRenderer();
+        // Obtenir le renderer du graphique
+        org.jfree.chart.plot.CategoryPlot plot = barChart.getCategoryPlot();
+        org.jfree.chart.renderer.category.BarRenderer renderer = (org.jfree.chart.renderer.category.BarRenderer) plot.getRenderer();
 
-    // Définir la couleur des barres
-    java.awt.Color customColor = new java.awt.Color(48, 48, 119); // Couleur [48, 48, 119]
-    renderer.setSeriesPaint(0, customColor); // Appliquer la couleur à la série 0
+        // Définir la couleur des barres
+        java.awt.Color customColor = new java.awt.Color(48, 48, 119);
+        renderer.setSeriesPaint(0, customColor); // Appliquer la couleur à la série 0
 
-    // Crée un ChartPanel avec le graphique
-    ChartPanel chart = new ChartPanel(barChart);
-    chart.setPreferredSize(new java.awt.Dimension(ChartPanel.getWidth(), ChartPanel.getHeight()));
+        // Crée un ChartPanel avec le graphique
+        ChartPanel chart = new ChartPanel(barChart);
+        chart.setPreferredSize(new java.awt.Dimension(ChartPanel.getWidth(), ChartPanel.getHeight()));
 
-    // Ajoute le ChartPanel au JPanel existant
-    ChartPanel.removeAll(); // Supprime tout contenu précédent
-    ChartPanel.add(chart, java.awt.BorderLayout.CENTER); // Ajoute le graphique au centre
-    ChartPanel.revalidate(); // Rafraîchit le JPanel
-    ChartPanel.repaint(); // Redessine le JPanel
+        // Ajoute le ChartPanel au JPanel existant
+        ChartPanel.removeAll(); // Supprime tout contenu précédent
+        ChartPanel.add(chart, java.awt.BorderLayout.CENTER); // Ajoute le graphique au centre
+        ChartPanel.revalidate(); // Rafraîchit le JPanel
+        ChartPanel.repaint(); // Redessine le JPanel
 }
 
     private DefaultCategoryDataset createDataset() {
