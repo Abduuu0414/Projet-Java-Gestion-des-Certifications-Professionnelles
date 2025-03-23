@@ -32,7 +32,7 @@ L'objectif de ce projet est de développer une application qui simplifie la gest
 
 ---
 
-## 🏷️ Logo
+## Logo
 ![Logo](https://github.com/user-attachments/assets/e9474565-b7bd-483f-bea7-b3530a99ff9d)
 
 
