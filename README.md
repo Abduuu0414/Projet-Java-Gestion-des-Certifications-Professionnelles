@@ -73,6 +73,7 @@ CREATE TABLE InscriptionCertification (
     certification_id INT NOT NULL,
     etudiant_id INT NOT NULL,
     date_inscription DATE NOT NULL,
+    PRIMARY KEY (certification_id, etudiant_id),
     FOREIGN KEY (certification_id) REFERENCES Certification(id),
     FOREIGN KEY (etudiant_id) REFERENCES Étudiant(id)
 );
