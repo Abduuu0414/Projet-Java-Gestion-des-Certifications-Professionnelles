@@ -80,10 +80,16 @@ CREATE TABLE User (
 
 ## Technologies et Bibliothèques Utilisées
 - **NetBeans 8.0.2** : Environnement de développement intégré (IDE) pour le développement de l'application en Java.
+- **MySQL**: Pour la gestion de la base de données. 
 - **MySQL Connector/J** : Pilote JDBC pour la connexion et l'interaction avec la base de données MySQL.
 - **JCalendar** : Bibliothèque pour la gestion des dates dans l'interface graphique.
 - **JFreeChart** : Bibliothèque pour la génération de graphiques (Pie Chart, etc.).
 - **Swing** : Bibliothèque Java pour la création de l'interface graphique utilisateur (GUI).
+- **Outils de développement** :  
+    - **IDE Java** : NetBeans
+    - **Conception** : MagicDraw
+    -  **Outil de gestion de base de données** : phpMyAdmin
+    - **Accès aux données** : JDBC
 
 ---
 
