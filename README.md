@@ -208,9 +208,14 @@ Cette structure permet une séparation claire des responsabilités et facilite l
 
 ---
 
-## Vidéo Démonstrative
-[Démonstration](https://github.com/user-attachments/assets/a1775b62-a56f-41ea-96fd-8449b441ac47
+## Vidéos Démonstrative
+
+Voici la  démonstration de **.exe setup** :
+[Démonstration](https://github.com/user-attachments/assets/3400d0c8-38d1-49ac-9b32-05152554eac0
 )
+
+Voici la  démonstration du **fproject functionalities** :
+[Démonstration](https://github.com/user-attachments/assets/0643489d-60f8-4222-9173-a80221f36999)
 
 ---
 
