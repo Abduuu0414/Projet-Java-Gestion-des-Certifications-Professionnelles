@@ -208,12 +208,9 @@ Cette structure permet une séparation claire des responsabilités et facilite l
 
 ---
 
-## Vidéos Démonstra
+## Vidéos Démonstrative
 
-tives  
-
-Voici la démonstration des **fonctionnalités du projet** :  
-[Démonstration](https://github.com/user-attachments/assets/1706549d-9886-47bf-bd3b-c2e4899a61ff)
+[Démonstration](https://github.com/user-attachments/assets/75943466-95c9-4a05-8483-eeee0cf48b07)
 
 ---
 
