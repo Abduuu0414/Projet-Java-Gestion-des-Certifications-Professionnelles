@@ -208,13 +208,12 @@ Cette structure permet une séparation claire des responsabilités et facilite l
 
 ---
 
-## Vidéos Démonstratives  
+## Vidéos Démonstra
 
-Voici la démonstration de **l'installation de l'exécutable (.exe setup)** :  
-[Démonstration](https://github.com/user-attachments/assets/3400d0c8-38d1-49ac-9b32-05152554eac0)  
+tives  
 
 Voici la démonstration des **fonctionnalités du projet** :  
-[Démonstration](https://github.com/user-attachments/assets/0643489d-60f8-4222-9173-a80221f36999)
+[Démonstration](https://github.com/user-attachments/assets/1706549d-9886-47bf-bd3b-c2e4899a61ff)
 
 ---
 
